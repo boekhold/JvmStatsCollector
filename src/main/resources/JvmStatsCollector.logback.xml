@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
+-->
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level [%logger{20}:%line] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!--
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <append>true</append>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${app.dir}/logs/LSDKTool.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date [%-5level] %logger{20} [%method:%line] - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+    -->
+
+    <!--
+    <logger name="Script" level="TRACE"/>
+    <logger name="LSDK" level="TRACE"/>
+    -->
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT"/>
+        <!-- appender-ref ref="FILE"/ -->
+    </root>
+</configuration>
